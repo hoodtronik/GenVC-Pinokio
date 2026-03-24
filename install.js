@@ -48,6 +48,48 @@ module.exports = {
       }
     },
     {
+      method: "fs.download",
+      params: {
+        url: "https://huggingface.co/ZexinCai/GenVC/resolve/main/pre_trained/contentVec.pt",
+        dir: "app/pre_trained"
+      }
+    },
+    {
+      method: "fs.download",
+      params: {
+        url: "https://huggingface.co/ZexinCai/GenVC/resolve/main/pre_trained/acoustic_dvae.pth",
+        dir: "app/pre_trained"
+      }
+    },
+    {
+      method: "fs.download",
+      params: {
+        url: "https://huggingface.co/ZexinCai/GenVC/resolve/main/pre_trained/content_dvae.pth",
+        dir: "app/pre_trained"
+      }
+    },
+    {
+      method: "fs.download",
+      params: {
+        url: "https://huggingface.co/ZexinCai/GenVC/resolve/main/pre_trained/gpt.pth",
+        dir: "app/pre_trained"
+      }
+    },
+    {
+      method: "fs.download",
+      params: {
+        url: "https://huggingface.co/ZexinCai/GenVC/resolve/main/pre_trained/hifigan.pth",
+        dir: "app/pre_trained"
+      }
+    },
+    {
+      method: "fs.download",
+      params: {
+        url: "https://huggingface.co/ZexinCai/GenVC/resolve/main/pre_trained/mel_stats.pth",
+        dir: "app/pre_trained"
+      }
+    },
+    {
       method: "notify",
       params: {
         html: "Installation completed. Click 'Start' to launch."
