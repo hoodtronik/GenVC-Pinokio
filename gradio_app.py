@@ -1,6 +1,7 @@
 import gradio as gr
 import subprocess
 import os
+import sys
 
 def genvc_infer(model_choice, src_wav, ref_wav, streaming):
     # Set CWD to app directory so infer.py can find internal files properly
@@ -12,7 +13,7 @@ def genvc_infer(model_choice, src_wav, ref_wav, streaming):
     model_path = f"pre_trained/{model_choice}.pth"
     
     cmd = [
-        "python", "infer.py",
+        sys.executable, "infer.py",
         "--model_path", model_path,
         "--src_wav", src_wav,
         "--ref_audio", ref_wav,
