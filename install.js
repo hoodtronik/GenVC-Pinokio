@@ -18,7 +18,8 @@ module.exports = {
           "pip install fairseq",
           "pip install torch==2.3.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121",
           "pip install gradio",
-          "pip install -r app/requirements.txt"
+          "pip install -r app/requirements.txt",
+          "pip install pandas coqpit --upgrade"
         ]
       }
     },
