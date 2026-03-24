@@ -1,6 +1,7 @@
 module.exports = {
   run: [
     {
+      when: "{{!exists('app')}}",
       method: "shell.run",
       params: {
         message: [
@@ -15,11 +16,20 @@ module.exports = {
         message: [
           "python -m pip install pip==20.3.4",
           "pip install transformers==4.33.0",
-          "pip install fairseq",
+          "pip install fairseq"
+        ]
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        venv: "app/env",
+        message: [
+          "python -m pip install --upgrade pip",
           "pip install torch==2.3.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121",
           "pip install gradio",
           "pip install -r app/requirements.txt",
-          "pip install pandas coqpit --upgrade"
+          "pip install coqpit pandas --upgrade"
         ]
       }
     },
